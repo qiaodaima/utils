@@ -8,7 +8,7 @@ class Storage {
   private namespace: string = ''; // 命名空间
   private nativeStorage = window.localStorage; // localStorage 或者是 sessionStorage
 
-  constructor(namespace: string, nativeStorage) {
+  constructor(namespace: string, nativeStorage = window.localStorage) {
     this.namespace = namespace;
     this.nativeStorage = nativeStorage;
   }
